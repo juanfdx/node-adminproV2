@@ -1,0 +1,36 @@
+[
+  {
+    "id"      : 1,
+    "title"   : "Dashboard",
+    "icon"    : "dashboard",
+    "submenu" : [
+      { 
+        "id"    : 1,
+        "title" : "Main", 
+        "url"   : "/dashboard" 
+      }
+    ]
+  },
+  {
+    "id"      : 2,
+    "title"   : "Mantenimientos",
+    "icon"    : "folder",
+    "submenu" : [
+      { 
+        "id"    : 1,
+        "title" : "Usuarios", 
+        "url"   : "users" 
+      },
+      { 
+        "id"    : 2,
+        "title" : "Hospitales", 
+        "url"   : "hospitals" 
+      },
+      { 
+        "id"    : 3,
+        "title" : "Médicos", 
+        "url"   : "medics" 
+      }
+    ]
+  }
+]
