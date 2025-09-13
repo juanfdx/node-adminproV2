@@ -13,8 +13,6 @@ const userRouter     = require('./routes/users')
 const hospitalRouter = require('./routes/hospitals')
 const medicRouter    = require('./routes/medics')
 
-// let { myport } = yargs
-//f
 
 //SERVIDOR EXPRESS - app tiene todo express con sus metodos
 const app = express()
@@ -25,7 +23,21 @@ const app = express()
 //   crossOriginResourcePolicy: false,
 // }) )
 
-app.use( cors() )
+// MIDDLEWARE- This helps confirm if your frontend is sending the right origin.
+app.use((req, res, next) => {
+  console.log('Origin:', req.headers.origin);
+  next();
+});
+
+
+app.use(
+  cors({
+    origin: 'https://api-node-adminpro-ef5039e6e1c1.herokuapp.com', // your frontend domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  })
+);
+
 app.use( express.json() )
 app.use( express.urlencoded({ extended : false }) )
 
