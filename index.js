@@ -4,7 +4,7 @@ const express = require('express')
 const cors    = require('cors')
 const { dbConnection } = require('./database/config')
 
-
+// ✅ Routes
 const authRouter     = require('./routes/auth')
 const searchRouter   = require('./routes/searches')
 const uploadRouter   = require('./routes/uploads')
@@ -36,13 +36,11 @@ app.use(userRouter)
 app.use(hospitalRouter)
 app.use(medicRouter)
 
-
 // ✅ Fallback route for Angular SPA index.html
 //Para que no pierda la ruta con el backend ya desplegado - part 2
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/index.html'))
 })
-
 
 // ✅ Start server
 const PORT = process.env.PORT || 3000

@@ -1,7 +1,12 @@
 ## 🧾 Description
-Medics & Hospitals Manager – Angular CMS Project
+Medics & Hospitals Manager – Backend API
 
-This is a portfolio project built using the Angular framework, along with HTML, CSS, Sass, and JavaScript. It serves as a Content Management System (CMS) designed specifically for managing information related to medical professionals and hospitals.
+This is the backend API for the Medics & Hospitals Manager full-stack project. It is built with Node.js, Express, and MongoDB, and serves as the server-side application that powers a custom Content Management System (CMS) for managing data related to medical professionals and hospitals.
+
+The backend handles all core logic, including authentication, CRUD operations, and communication with the MongoDB database.
+
+Frontend GitHub Repository:<br />
+🔗[Medics & Hospitals Manager – Angular CMS](https://github.com/juanfdx/angular-adminpro)
 
 ## 🧐 Author 
 
