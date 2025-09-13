@@ -16,25 +16,7 @@ const medicRouter    = require('./routes/medics')
 const app = express()
 
 // ✅ CORS CONFIG (add this before other middleware)
-const allowedOrigins = [
-  'https://api-node-adminpro-ef5039e6e1c1.herokuapp.com',
-  'https://my-adminpro.netlify.app'
-];
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true
-};
-
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+app.use(cors())
 
 // ✅ Body parsers
 app.use( express.json() )
